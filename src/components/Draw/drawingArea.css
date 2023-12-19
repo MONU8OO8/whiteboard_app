@@ -1,0 +1,57 @@
+.pen-selection {
+  background-color: white;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pen-selection:hover {
+    background-color: rgb(197, 196, 196);
+  }
+
+.pen-selection.highlighted {
+  background-color: rgb(197, 196, 196);
+}
+
+
+.sticky-note {
+  width: 200px;
+  border: 1px solid rgb(197, 196, 196);
+  position: absolute;
+  border-radius: 1rem;
+  top: 30px;
+  left: 50px;
+}
+
+.sticky-note-header {
+  background: rgb(197, 196, 196);
+  color: white;
+  border-radius: 1rem;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  cursor: move;
+}
+
+textarea {
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  height: 250px;
+  resize: none;
+  border: none;
+}
+
+.close {
+  width: 35px;
+  height: 35px;
+  background: red;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+.close:hover {
+  opacity: 0.8;
+}
