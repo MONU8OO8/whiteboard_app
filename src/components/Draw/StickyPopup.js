@@ -27,7 +27,7 @@ function StickyPopup({
   fontFamily,
   onTextDecoration
 }) {
-  const colorOptions = ['red', 'green', 'blue'];
+  const colorOptions = ['#ffa', 'green', 'blue'];
   const [stylePopup, setStylePopup] = useState(false);
   const groupRef = useRef(null);
 

@@ -48,7 +48,7 @@ const DrawingArea = () => {
   // Redo hooks
   // stickynotes
   const [stickynotes, setStickynotes] = useState([])
-  function addNote() {
+  function addNote1() {
     setStickynotes([
       ...stickynotes,
       {
@@ -714,7 +714,7 @@ const DrawingArea = () => {
               <div
                 style={{ padding: "12px" }}
                 // onClick={() => setStickyShow(!stickyShow)}
-                onClick={addNote}
+                onClick={addNote1}
               >
                 <BsStickyFill />
               </div>

@@ -27,7 +27,7 @@ export function EditableText({
   if (isEditing) {
     return (
       <EditableTextInput
-        x={x + 10}
+        x={x}
         y={y + 20}
         width={width}
         height={height}

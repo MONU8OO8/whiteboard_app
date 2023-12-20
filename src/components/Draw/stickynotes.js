@@ -10,7 +10,7 @@ export default function StickyNote({ onClose }) {
   const [dy, setDy] = useState(0);
 
   useEffect(() => {
-    
+
     adjustStickyNoteSize();
   }, []);
 
@@ -35,17 +35,17 @@ export default function StickyNote({ onClose }) {
   }
 
   function adjustStickyNoteSize() {
-    // Adjust the size of the sticky note based on textarea content
+     
     const textarea = textareaRef.current;
     textarea.style.height = "auto";
     textarea.style.height = textarea.scrollHeight + "px";
 
-    // Set the initial width and minimum height of the sticky note
+    
     const initialWidth = 200;
     const minHeight = 200;
     stickyNoteRef.current.style.width = initialWidth + "px";
 
-    // Update the sticky note's height based on the textarea content
+     
     let height = textarea.scrollHeight;
     if (height < minHeight) {
       height = minHeight;
@@ -59,21 +59,26 @@ export default function StickyNote({ onClose }) {
       ref={stickyNoteRef}
       onMouseMove={handleMouseMove}
     >
+      
+      <div>
       <div
         className="sticky-note-header"
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
       >
-        <div>Sticky Note</div>
+        {/* <h6>Sticky Note</h6> */}
         <div className="close" onClick={onClose}>
           &times;
         </div>
       </div>
-      <textarea
-        ref={textareaRef}
-        onInput={adjustStickyNoteSize}
-        placeholder="Type here..."
-      ></textarea>
+      
+        <textarea
+          ref={textareaRef}
+          onInput={adjustStickyNoteSize}
+          placeholder="Type here..."
+        ></textarea>
+      </div>
+
     </div>
   );
 }

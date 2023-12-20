@@ -1,4 +1,5 @@
-.pen-selection {
+ /* @import url(https://fonts.googleapis.com/css?family=Permanent+Marker); */
+ .pen-selection {
   background-color: white;
   transition: background-color 0.3s;
   cursor: pointer;
@@ -16,7 +17,7 @@
 
 .sticky-note {
   width: 200px;
-  border: 1px solid rgb(197, 196, 196);
+  /* border: 1px solid rgb(197, 196, 196); */
   position: absolute;
   border-radius: 1rem;
   top: 30px;
@@ -24,32 +25,42 @@
 }
 
 .sticky-note-header {
-  background: rgb(197, 196, 196);
+  /* background: rgb(197, 196, 196); */
   color: white;
   border-radius: 1rem;
-  padding: 10px;
+  padding: 4px;
   display: flex;
   justify-content: space-between;
   cursor: move;
 }
 
-textarea {
+.sticky-note textarea {
   outline: none;
   width: 100%;
   padding: 10px;
-  height: 250px;
+  height: 150px !important;
+  border-radius:0 0 0 10px/45px;
   resize: none;
   border: none;
+  background: #ffa;
+  box-shadow:
+    inset 0 -5px 10px rgba(0,0,0,0.2),
+    inset 0 10px 10px rgba(0,0,0,0.2),
+    0 1px 1px 1px rgba(0,0,0,0.2);
+  font-family: 'Permanent Marker', cursive;
+  
+  font-size:19px;
+  color:#130d6b;
 }
 
 .close {
-  width: 35px;
-  height: 35px;
+  width: 20px;
+  height: 20px;
   background: red;
   border-radius: 50%;
   display: grid;
   place-content: center;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
   cursor: pointer;
 }
 .close:hover {

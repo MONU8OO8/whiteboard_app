@@ -117,7 +117,7 @@ const Sticky = ({
             height={height}
             fill={stickyColor}
             stroke="#999966"
-            strokeWidth={4}
+            strokeWidth={2}
             {...(stickyStyle.border && { stroke: "black", strokeWidth: 2 })}
             cornerRadius={10}
             draggable={draggable}
